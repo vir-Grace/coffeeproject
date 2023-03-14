@@ -1,0 +1,967 @@
+
+body{
+    background:peachpuff;
+     /* padding: 1rem 1rem; */ */
+}
+
+*,::after,
+::before {
+  box-sizing: border-box;
+}
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400|Hind:400');
+
+html {font-size: 100%;} /*16px*/
+
+:root{
+  /* color */
+  /* primary */
+  /* CHANGE THE PRIMARY COLORS */
+  --primary-100: #cff4fc;
+  --primary-200: #9eeaf9;
+  --primary-300: #6edff6;
+  --primary-400: #3dd5f3;
+  --primary-500: #0dcaf0;
+  --primary-600: #0aa2c0;
+  --primary-700: #087990;
+  --primary-800: #055160;
+  --primary-900: #032830;
+  
+  /* grey */
+  --grey-50: #fafafa;
+  --grey-100: #f5f5f5;
+  --grey-200: #e5e5e5;
+  --grey-300: #d4d4d4;
+  --grey-400: #a3a3a3;
+  --grey-500: #737373;
+  --grey-600: #525252;
+  --grey-700: #404040;
+  --grey-800: #262626;
+  --grey-900: #171717; 
+
+  /* rest of the colors */
+
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+  
+    /* --black: #222;
+    --white: #fff;
+    --red-light: #ffcccb;
+    --red-dark: #b80400;
+    --green-light: #d1e7dd;
+    --green-dark: #0f5132; */
+
+
+    /* fonts */
+    --headingFont:'Playfair Display', serif;
+    --bodyFont:'Raleway', sans-serif;
+    --smallText: 0.7em;
+
+    /* rest of the vars */
+    --backgroundColor:var(--grey-100);
+    --fontColor: var(--grey-900);
+    --borderRadius:0.25rem;
+    --letterSpacing:1px;
+    --transition:0.3s ease-in-out all;
+    --max-width: 1120px;
+    --fixed-width: 600px;
+
+    /* box shadow */
+    --shadow-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-4: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--fontColor);
+}
+
+p {margin-bottom: 1.5rem;
+   max-width: 40em;}  
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize ;
+  color: var(--primary-600);
+  /* font-color of headers in here */
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {font-size: 2.441rem;}
+
+h3 {font-size: 1.953rem;}
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+small, .text-small {font-size:var(--smallText);} 
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}2
+
+.container{
+  width: 100%;
+  border: 3px solid var(--primary-500);
+  border-radius: var(--borderRadius);
+  max-width: var(--max-width);
+}
+
+.img{
+  width: 100%;
+  display: block;
+  /* display block must be added or there will be a weird empty space on container */
+object-fit: cover;
+/* to keep the image from being distorted */
+}
+
+
+/* buttons */
+
+.btn{ 
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.btn:hover{
+  background:var(--primary-700);
+  box-shadow: var(--shadow-3);
+}
+
+.btn-hipster{
+  color: var(--primary-500);
+  background: var(--primary-200);
+}
+
+.btn-hipster:hover{
+  color: var(--primary-200);
+  background: var(--primary-700);
+}
+
+.btn-block{
+  width: 100%;
+}
+
+/* alerts */
+.alert{
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  border-color: transparent;
+  border-radius: var(--borderRadius);
+}
+
+.alert-danger{
+  color: var(--red-dark);
+  background: var(--red-light);
+
+}
+
+.alert-success{
+  color: var(--green-dark);
+  background: var(--green-light);
+}
+
+/* form */
+
+.form{
+  width: 90vw;
+  max-width: var(--fixed-width);
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  margin: 3rem auto;
+}
+
+.form-label{
+  display: block;
+  font-size: var(--smallText);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+.form-input,.form-textarea{
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  background: var(--backgroundColor);
+  border: 1px solid var(--grey-200);
+}
+
+.form-row{
+  margin-bottom: 1rem;
+}
+.form-textarea{
+  height: 7rem;
+}
+
+::placeholder{
+  font-family: inherit;
+  color: var(--grey-400);
+}
+
+.form-alert{
+  color: var(--red-dark);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+}
+
+/* alert */
+@keyframes spinner{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.loading{
+  width: 6rem;
+  height: 6rem; 
+  border: 5px solid var(--grey-400);
+  border-radius: 50%;
+  border-top-color: var(--primary-500);
+  animation: spinner 0.6s linear infinite;
+  /* margin: 0 auto; */
+}
+
+.loading{
+  margin: 0 auto;
+}
+
+/* title */
+.title{
+  text-align: center;
+}
+
+.title-underline{
+  background: var(--primary-500);
+  width: 7rem;
+  height: 0.25rem;
+  margin: 0 auto;
+}
+
+/* 
+==================
+NAVBAR
+=================
+*/
+.nav-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  /* background-color: navy; */
+}
+
+.nav-center{
+  width: 90vw;
+  /* 90% of the screen sie */
+ max-width: var(--max-width);
+ /* margin: auto; */
+ /* background-color: peachpuff; */
+}
+
+.nav-header{
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: yellowgreen; */
+  
+}
+
+.nav-logo{
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+ 
+}
+
+.nav-header img{
+  width: 100px;
+}
+
+.nav-btn{
+  padding: 0.15rem 0.75rem;
+}
+
+.nav-btn i{
+  font-size: 1.25rem;
+}
+
+.nav-links{
+  display: flex;
+  flex-direction: column;
+  /* to do */
+  height: 0; 
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-links {
+  height: 310px;
+} 
+
+.nav-link {
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--grey-900);
+  letter-spacing: var(--letterSpacing);
+  padding: 1rem 0;
+  border-top: 1px solid var(--grey-500);
+  transition: var(--transition);
+}
+
+.nav-link:hover{
+  color:var(--primary-500);
+
+}
+
+.contact-link a{
+  padding: 0.15rem 1rem;
+}
+
+@media screen and (min-width:992px) {
+  .nav-btn{
+    display: none;
+    
+  }
+  .navbar{
+    height: 6rem;
+    
+  }
+  .nav-center{
+    display: flex;
+    align-items: center;
+    /* background-color: green; - trial only */
+  }
+
+  .nav-header{
+    height: auto;
+    margin-right: 2rem;
+    
+  }
+  .nav-links{
+    height: auto;
+    /* getting back the links into the big screen, thus showing the links back - height: auto */
+    flex-direction: row;
+    /* changing the direction of text into row */
+    align-items: center;
+    width: 100%;
+    /* spanning the width of nav-links all accross the screen */
+   
+  }
+  .nav-link{
+    padding: 0;
+    border-top: none;
+    margin-right: 1rem;
+    font-size: 1rem;
+    
+  }
+  .contact-link{
+    margin-left: auto;
+    /* placing all the way into right side */
+    margin-right: 0;
+  }
+} 
+
+/* 
+==================
+Page
+=================
+*/
+.page{
+  /* background: red; */
+  width: 90vw;
+  /* 90% of view height */
+  max-width:var(--max-width) ;
+  margin: 0 auto;
+  padding-top: 2rem;
+  min-height: calc(100vh - (6rem + 4rem));
+  /* min-height: 100vh; */
+}
+/* 
+==================
+Footer
+=================
+*/
+.page-footer{
+  height: 4rem;
+  /* text-align: center; */
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* to put the text in center, as in justify */
+}
+
+.page-footer p{
+  margin-bottom: 0;
+  
+}
+
+.footer-logo, 
+.page-footer a
+/* I DON'T UNDERTAND THIS!!!     */
+{
+  color: var(--primary-500);
+  
+}
+
+/* 
+==================
+Hero
+=================
+*/
+
+.hero{
+  height: 40vh;
+  background: url('../assets/bigcoffee.avif' ) center/cover no-repeat;
+  margin-bottom: 2rem;
+  border-radius: var(--borderRadius);
+  position: relative; 
+  /* align-items: center;
+  justify-content: center; */
+  background-color: blue;
+
+}
+
+.hero-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--borderRadius);
+  display: flex;
+  align-items: center;
+  /* vertical center */
+
+  justify-content: center;
+  /* horizontal center */
+ }
+
+.hero-text h4, .hero-text h1{
+  text-align: center;
+  color:var(--white);
+ 
+  
+}
+/* supposedly, the text can be target without h4 and h1 tags, action: figure out */
+
+
+@media screen  and (min-width:768px) {
+  .hero-text h1{
+      /* font-size: 4rem; */
+      font-size: 4rem;
+      margin-bottom: 0;
+  }
+}
+
+
+/* 
+==================
+Recipes
+=================
+*/
+
+.recipes-container{
+  display: grid;
+  /* one column lay out - grid */
+  gap: 2rem 2rem;
+  /* border: 2px solid red; */
+}
+
+.tags-container{
+  /* border: 2px solid blue; */
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.recipes-list{
+  display: grid;
+  gap: 2rem 1rem;
+  padding-bottom: 3rem;
+  /* border: 2px solid green; */
+}
+
+.tags-container h4{
+  margin-bottom:  0.5rem;
+  font-weight: 500;
+  color: var(--grey-600);
+}
+
+.tags-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tags-list a{
+  text-transform: capitalize;
+  display: block;
+  color: var(--grey-500);
+  transition: var(--transition);
+}
+
+.tags-list a:hover{
+  color: var(--primary-500);
+}
+
+
+.recipe{
+  display: block;
+}
+
+.recipe-img{
+ height: 15 rem;
+ border-radius: var(--borderRadius);
+ margin-bottom: 1rem;
+}
+
+.recipe h5{
+  margin-bottom: 0;
+  line-height: 1;
+  color: var(--grey-700);
+  transition: var(--transition);
+  letter-spacing: var(--letterSpacing);
+}
+
+/* .recipe h5:hover{
+  color: var(--primary-500);
+} */
+.recipe p{
+  margin-bottom: 1;
+  line-height: 1;
+  margin-top: 0.5rem;
+  color: var(--grey-500);
+  letter-spacing: var(--letterSpacing);
+}
+
+@media screen and (min-width: 576px){
+  .recipes-list{
+    grid-template-columns: 1fr 1fr;
+  }
+  .recipe-img{
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .recipes-container{
+    grid-template-columns: 200px 1fr;
+  }
+  .tags-container{
+    order: 0;
+  }
+  .recipe p{
+    font-size: 0.85rem;
+
+  }
+  .tags-list{
+    grid-template-columns: 1fr;
+  } 
+  
+}
+
+@media screen and (min-width: 1200px){
+  /* .recipes-container{
+    grid-template-columns: 200px 1fr;
+  } */
+  .recipes-list{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .recipe h5{
+    font-size: 1.15rem;
+  }
+
+  .recipe-img-cap{
+    margin:0;
+    
+  }
+}
+
+
+
+/* 
+==================
+ERRROR
+=================
+*/
+
+.error-page {
+  text-align: center;
+  padding: 5rem;
+}
+
+.error-page h1{
+  font-size: 9rem;
+  color: var(--grey-700);
+}
+
+.error-page h3{
+  color: var(--grey-700);
+}
+
+/* 
+==================
+ABOUT
+=================
+*/
+
+.about-page h2{
+  text-transform: none;
+  font-weight: bold;
+  color: var(--grey-700);
+}
+
+.about-page{
+  display: grid;
+  gap: 2rem 4rem;
+  padding-bottom: 3rem;
+  
+}
+
+.about-img{
+  border-radius: var(--borderRadius);
+  height: 300px;
+  margin: auto;
+  
+}
+
+@media screen and (min-width:992px) {
+  .about-page{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    align-items: center;
+  }
+
+  .about-img{
+    height: 100%;
+  }
+}
+  
+
+.featured-title{
+  text-align: center;
+  color: var(--grey-00);
+}
+
+
+
+/* 
+==================
+CONTACT PAGE
+=================
+*/
+
+.contact-form{
+  width: 100%;
+  margin: 0;
+}
+
+.contact-container{
+  display: grid;
+  gap: 2rem 3rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width:992px) {
+  .contact-container{
+    grid-template-columns: 1fr 450px;
+    grid-template-rows: 400px;
+    align-items: center;
+  }
+  
+}
+/* 
+==================
+TAGS Page
+=================
+*/
+
+.tags-hero{
+  height: 40vh;
+  background: url('../assets/coffee\ beans.jpeg' ) center/cover no-repeat;
+  margin-bottom: 2rem;
+  border-radius: var(--borderRadius);
+  position: relative; 
+  align-items: center;
+  justify-content: center; 
+}
+
+.tags-text h2{
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  /* color:var(--white); */
+}
+
+.tags-text p{
+  color:var(--white);
+}
+
+.tags2-container{
+  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: var(--borderRadius);
+    display: flex;
+    align-items: center;
+    /* vertical center */
+  
+    justify-content: center;
+    /* horizontal center */
+   
+}
+
+
+.tags-wrapper{
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 3rem;
+  align-items:center;
+        justify-content:center;
+  
+}
+
+.tag{
+  background: var(--grey-500);
+  border-radius: var(--borderRadius);
+  text-align: center;
+  color: var(--white);
+  transition: var(--transition);
+  padding: 1rem 0;
+}
+
+.tag:hover{
+  background-color: var(--primary-500);
+}
+
+.tag p{
+  text-align: center;
+}
+
+.tag h5, .tag p{
+  margin-bottom: 0;
+}
+
+.tag h5{
+  font-weight: 600;
+  color: var(--white);
+  vertical-align: middle;
+}
+
+@media screen and (min-width:576px) {
+  .tags-wrapper{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .tags-wrapper{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+==================
+SINGLE RECIPE PAGE
+=================
+*/
+
+
+.recipe-hero{
+  display: grid;
+  gap: 3rem;
+}
+
+.recipe-hero-img{
+  height: 300px;
+  border-radius: var(--borderRadius);
+}
+
+.recipe-hero p{
+  color: var(--grey-600);
+}
+
+.recipe-icons{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: -1rem;
+  margin-bottom: -2rem 0;
+  text-align: center;
+  /* background-color: red; */
+}
+
+.recipe-icons i{
+  font-size: 1.5rem;
+  color: var(--primary-500);
+ 
+}
+
+.recipe-icons h5, .recipe-icons p{
+  margin: 2px 2px 2px 2px; 
+
+padding: 2px 2px 2px 2px;
+  /* margin-bottom: 0; */
+  font-size: 0.85rem;
+}
+
+.recipe-icons h5{
+  color: var(--grey-800);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.recipe-tags{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.5;
+  font-weight: 300;
+  padding-top: 1rem;
+}
+
+.recipe-tags a{
+  background-color: var(--primary-500);
+  border-radius: var(--borderRadius);
+  color: var(--white);
+  padding: 0.1rem 0.1rem;
+  margin: 0 0.25rem;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width:992px) {
+  .recipe-hero{
+    grid-template-columns: 4fr 5fr;
+    align-items: center;
+  }
+}
+
+.recipe-content{
+  padding: 3rem 0;
+  display: grid;
+  gap: 2rem 5rem;
+}
+
+@media screen and (min-width:992px) {
+  .recipe-content{
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.single-instruction header{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.single-instruction header p{
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+  color:var(--primary-500) ;
+}
+
+.single-instruction > p{
+  color: var(--grey-600);
+
+}
+
+.single-instruction header div{
+  height: 1.5px;
+  background: var(--grey-300)
+}
+
+.second-column{
+  display: grid;
+  row-gap: 2rem;
+}
+
+.single-ingredients {
+  border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem;
+  color: var(--grey-700);
+}
+
+.single-tool{
+  border-bottom: 2px solid var(--grey-300);
+  padding-bottom: 0.75rem;
+  color: var(--grey-700);
+  text-transform: capitalize;
+}
+
+
+/* BREW PAGE  */
+
+.brew-page{
+  display: grid;
+  gap: 2rem 4rem;
+  padding-bottom: 3rem;
+
+  
+}
+
+.brew-img{
+  border-radius: var(--borderRadius);
+  /* height: 200px; */
+  width: 300px;
+  margin: auto;
+  margin-bottom: 1rem red solid;
+}
+
+@media screen and (min-width:992px) {
+  .brew-page{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    align-items: center;
+  }
+
+
+  .brew-img{
+    height: 100%;
+  }
+    }

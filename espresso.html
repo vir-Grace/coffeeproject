@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Single - Recipes Page</title>
+<!-- favicon -->
+<link rel="shortcut icon" href="./assets/G brown logo.png" type="image/x-icon">
+<!-- normalize -->
+<link rel="stylesheet" href="./css/normalize.css">
+<!-- font awesome - these are fonts  (copied from starter files) -->
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+<!-- main css -->
+<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- understand this one -->
+    <nav class="nav-bar">
+   <div class="nav-center"> 
+                <!-- comments: nav center inside of navbar bec nav only span accross a certain width -->
+    <!-- header -->
+    <div class="nav-header">
+        <a href="index.html" class="nav-logo"><img src="./assets/COFFEE.png" alt="coffe logo" width="100"></a>
+                        <!-- comments: why add class???? -->
+    <button type="button"   class="btn nav-btn">
+        <i class="fas fa-align-justify"></i>
+                        <!--  comments: links to the font wawesome -->
+    </button>
+    </div>
+    <!-- links -->
+    <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutC.html" class="nav-link">About</a>
+        <a href="tagsC.html" class="nav-link">Coffee Shops</a>
+        <a href="recipesC.html" class="nav-link">Location</a>
+        <!-- !!!UDNERSTAND THIS-->
+        <div class="nav-link contact-link">
+            <a href="contactC.html" class="btn">Contact</a>
+        </div>
+    </div>
+   </div>
+</nav>
+    
+<!-- end of nav-->
+<!-- main -->
+<main class="page">
+    <div class="recipe-page">
+        <section class="recipe-hero">
+            <img src="./assets/espresso-shot.webp" class="img recipe-hero-img"  alt="coffee recipe">
+            <article>
+                <h2>Espresso Shots</h2>
+                <p> Starting with the base of most coffee drinks -espresso. Espresso is a small, concentrated shot of coffee served in small, strong shots.  Made by forcing pressurized hot water through very finely ground coffee beans using an espresso machine, it is the base for many coffee drinks including those on our list: americano, caffe latte, capuccino, and many more.     
+                    </p>
+                <!-- recipe icons -->
+                <div class="recipe-icons">
+                <!-- single-reipe icon -->
+                    <article>
+                            <h5>Caffeine Content</h5>
+                            <p>around 63mg</p>
+                    </article>
+                     <!-- single-reipe icon -->
+                     <article>
+                        <!-- <i class="far fa-clock"> </i> -->
+                            <h5>Extract for</h5>
+                            <p>25-30 seconds</p>
+                    </article>
+                     <!-- single-reipe icon -->
+                     <article>
+                        <!-- <i class="fas fa-user-friends"> </i> -->
+                            <h5>servings</h5>
+                            <p>1 cup</p>
+                    </article>
+                </div>
+                <!-- recipe tags -->
+                <div class="recipe-tags">
+                    Tags: <a href="tag-templateC.html"> Black</a>
+                    <a href="tag-templateC.html"> Hot</a>
+                    <a href="tag-templateC.html"> Cold</a>
+                    <a href="tag-templateC.html"> Beans</a>
+                </div>
+            </article>
+        </section>
+        <!-- recipe content -->
+        <section class="recipe-content">
+            <article>
+                <h4>instructions</h4>
+                <!-- single instruction -->
+                <div class="single-instruction">
+                    <header>
+                        <p>Step 1</p>
+                        <div></div>
+                    </header>
+                    <p>Preheat your machine, give it time to warm up. 
+                    </p>
+                     <!-- single instruction -->
+                <div class="single-instruction">
+                    <header>
+                        <p>Step 2</p>
+                        <div></div>
+                    </header>
+                    <p>Once machine is heated, take the portafilter and fill it with finely ground coffee beans, usually around 20g of coffee. 
+                    </p>
+                     <!-- single instruction -->
+                <div class="single-instruction">
+                    <header>
+                        <p>Step 3</p>
+                        <div></div>
+                    </header>
+                    <p>Compress beans by applying firm pressure with your tramp. Once portafilter is ready, tiwst the portafilter into the machine and select the right button for your desired espresso. 
+                    </p>
+                    <!-- single instruction -->
+                <div class="single-instruction">
+                    <header>
+                        <p>Step 4</p>
+                        <div></div>
+                    </header>
+                    <p>Make sure the espresso cup is place beneath the portafilter before you press go through.  Then pull your shot and taste your coffee!
+                    </p>
+                </div>
+            </article>
+            <article class="second-column">
+                <div>
+                    <h4>Ingredients</h4>
+                    <p class="single-ingredients">
+                        Finely ground coffee beans
+                    </p>
+                    <!-- <p class="single-ingredients">
+                        Espresso machine
+                    </p> -->
+                    <p class="single-ingredients">
+                        Filtered water
+                    </p>
+                </div>
+                <div>
+                    <h4>Tools</h4>
+                    <p class="single-tool"> Espresso Machine</p>
+                    <p class="single-tool"> Portafilter</p>
+                    <p class="single-tool"> A tamp</p>
+                    <p class="single-tool"> Espresso Shot</p>
+                </div>
+            </article>
+        </section>
+    </div>
+
+
+
+</main>
+<!-- end of main -->
+<!-- footer -->
+<footer class="page-footer">
+  <p>
+    &copy; <span id="date">2023</span>
+<span class="footer-logo"> Cofee Recipes </span>
+Built by Grace </p>  
+</footer>
+
+<script src="./js/app.js"></script>
+</nav>
+</body>
+</html>
